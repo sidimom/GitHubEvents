@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/eventsListFragment">
+
+    <fragment
+        android:id="@+id/eventsListFragment"
+        android:name="com.example.events.ui.fragment.EventsListFragment"
+        android:label="fragment_events_list"
+        tools:layout="@layout/fragment_events_list" >
+        <action
+            android:id="@+id/action_eventsListFragment_to_repoFragment"
+            app:destination="@id/repoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/repoFragment"
+        android:name="com.example.events.ui.fragment.RepoFragment"
+        android:label="fragment_repo"
+        tools:layout="@layout/fragment_repo" >
+        <argument
+            android:name="repo_url"
+            app:argType="string" />
+    </fragment>
+</navigation>
